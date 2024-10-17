@@ -11,7 +11,7 @@ const PLAYERS = {
   O: "Player 2",
 };
 
-const initialGameBoard = [
+const INITIAL_GAME_BOARD = [
   [null, null, null],
   [null, null, null],
   [null, null, null],
@@ -27,7 +27,7 @@ function deriverActivePlayer(gameTurns) {
 }
 
 function deriveGameBoard(gameTurns) {
-  let gameBoard = [...initialGameBoard.map((array) => [...array])];
+  let gameBoard = [...INITIAL_GAME_BOARD.map((array) => [...array])];
 
   for (const tuns of gameTurns) {
     const { square, player } = tuns;
